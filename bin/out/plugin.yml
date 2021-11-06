@@ -1,0 +1,9 @@
+name: B4six
+version: 0.1
+authoer: PfadieTV
+main: www.pfadietv.b4six.B4six
+commands:
+     ping:
+          description: Returns Pong if plugin works properly
+          usage: </command>
+          permission: xssentials.ping
