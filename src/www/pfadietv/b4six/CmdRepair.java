@@ -5,17 +5,18 @@ import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
-public class CmdPing implements CommandExecutor
+public class CmdRepair implements CommandExecutor
 {
 	@SuppressWarnings("unused")
 	private B4six plugin;
 	private String permission;
 
-	public CmdPing(B4six b4six) {
+	public CmdRepair(B4six b4six) {
 		this.plugin = b4six;
-		permission = "b4six.ping";
+		permission = "b4six.repair";
 	}
 
+	@SuppressWarnings("deprecation")
 	@Override
 	public boolean onCommand(CommandSender sender, Command cmd, String cmdlabel, String[] args)
 	{
@@ -24,7 +25,8 @@ public class CmdPing implements CommandExecutor
 		if(p.hasPermission(permission))
 		{
 			//What to do on command:
-			p.sendMessage("Pong");
+			p.getInventory().getItemInMainHand().setDurability((short)0);
+			p.sendMessage("Das gehaltene Item wurde repariert");
 		}
 		else
 		{

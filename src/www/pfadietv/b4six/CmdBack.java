@@ -1,22 +1,21 @@
 package www.pfadietv.b4six;
 
+import org.bukkit.Location;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
-public class CmdPing implements CommandExecutor
+public class CmdBack implements CommandExecutor
 {
-	@SuppressWarnings("unused")
 	private B4six plugin;
 	private String permission;
 
-	public CmdPing(B4six b4six) {
+	public CmdBack(B4six b4six) {
 		this.plugin = b4six;
-		permission = "b4six.ping";
+		permission = "b4six.back";
 	}
-
-	@Override
+	
 	public boolean onCommand(CommandSender sender, Command cmd, String cmdlabel, String[] args)
 	{
 		Player p = (Player) sender;
@@ -24,7 +23,14 @@ public class CmdPing implements CommandExecutor
 		if(p.hasPermission(permission))
 		{
 			//What to do on command:
-			p.sendMessage("Pong");
+			if((boolean) plugin.onlinePlayer.get(p.getUniqueId()).betterPlayerData.get("backLocSet"))
+			{
+				p.teleport((Location)plugin.onlinePlayer.get(p.getUniqueId()).betterPlayerData.get("backLoc"));
+			}
+			else
+			{
+				p.sendMessage("You never teleported yourself in that session.");
+			}
 		}
 		else
 		{

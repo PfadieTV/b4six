@@ -7,3 +7,158 @@ commands:
           description: Returns Pong if plugin works properly
           usage: </command>
           permission: xssentials.ping
+     feed:
+          description: Fills food bar for specific player
+          usage: </command>
+          permission: xssentials.feed
+     heal:
+          description: Heals a specific player
+          usage: </command>
+          permission: xssentials.heal
+     repair:
+          description: Repairs currently holding item
+          usage: </command>
+          permission: xssentials.repair
+     sun:
+          description: Change weather to sunny
+          usage: </command>
+          permission: xssentials.weather
+     rain:
+          description: Change weather to rainy
+          usage: </command>
+          permission: xssentials.weather
+     thunder:
+          description: Change weather to thundering
+          usage: </command>
+          permission: xssentials.weather
+     weather:
+          description: Get the current weather
+          usage: </command>
+          permission: xssentials.weather
+     day:
+          description: Change time to day
+          usage: </command>
+          permission: xssentials.time
+     night:
+          description: Change time to night
+          usage: </command>
+          permission: xssentials.time
+     compass:
+          description: Outputs Player Orientation
+          usage: </command>
+          permission: xssentials.compass
+     fly:
+          description: Enables flymode
+          usage: </command>
+          permission: xssentials.fly
+     flyspeed:
+          description: Set flyspeed
+          usage: </command>
+          permission: xssentials.flyspeed
+     home:
+          description: Teleports player to specific home
+          usage: </command>
+          permission: xssentials.home
+     homes:
+          description: List all personal homes
+          usage: </command>
+          permission: xssentials.home
+     sethome:
+          description: Sets a new home
+          usage: </command>
+          permission: xssentials.home
+     delhome:
+          description: Deletes one specific home
+          usage: </command>
+          permission: xssentials.home
+     viewhome:
+          description: Shows the coords for one specific home
+          usage: </command>
+          permission: xssentials.home
+     payTeleport:
+          description: Opens a window to stores ender pearls as payment
+          usage: </command>
+          permission: xssentials.home
+     back:
+          description: Teleports back to last position
+          usage: </command>
+          permission: xssentials.back
+     warp:
+          description: Teleports player to specific warp
+          usage: </command>
+          permission: xssentials.warp
+     warphelp:
+          description: Show help text for warp command
+          usage: </command>
+     warps:
+          description: List all avaible warps
+          usage: </command>
+          permission: xssentials.warps
+     setwarp:
+          description: Sets a new warp
+          usage: </command>
+          permission: xssentials.setwarp
+     delwarp:
+          description: Delete a specific warp
+          usage: </command>
+          permission: xssentials.delwarp
+     setspawn:
+          description: Sets a new warp-like spawn
+          usage: </command>
+          permission: xssentials.setspawn
+     spawn:
+          description: Teleports a player to the set spawn point
+          usage: </command>
+          permission: xssentials.spawn
+     craft:
+          description: Open crafting gui
+          usage: </command>
+          permission: xssentials.craft
+     god:
+          description: Toggle god-mode
+          usage: </command>
+          permission: xssentials.god
+     ender:
+          description: Open personal or other ender chest gui
+          usage: </command>
+          permission: xssentials.ender
+     invsee:
+          description: Open other inventory gui
+          usage: </command>
+          permission: xssentials.invsee
+     msg:
+          description: Sends a private message to another player
+          usage: </command>
+          permission: xssentials.msg
+     r:
+          description: Answers to a private message
+          usage: </command>
+          permission: xssentials.msg
+     gms:
+          description: Changes gamemode to survival
+          usage: </command>
+          permission: xssentials.gamemode
+     gmc:
+          description: Changes gamemode to creative
+          usage: </command>
+          permission: xssentials.gamemode
+     tpa:
+          description: Sends teleport request to another player
+          usage: </command>
+          permission: xssentials.tpa
+     tpaaccept:
+          description: Accepts teleport request
+          usage: </command>
+          permission: xssentials.tpa
+     tpadeny:
+          description: Deny teleport request
+          usage: </command>
+          permission: xssentials.tpa
+     tpahere:
+          description: Sends teleport here request to another player
+          usage: </command>
+          permission: xssentials.tpa
+     tpatoggle:
+          description: Toggle automated acception of tpas
+          usage: </command>
+          permission: xssentials.tpa

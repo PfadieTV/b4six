@@ -5,15 +5,15 @@ import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
-public class CmdPing implements CommandExecutor
+public class CmdTime implements CommandExecutor
 {
 	@SuppressWarnings("unused")
 	private B4six plugin;
 	private String permission;
 
-	public CmdPing(B4six b4six) {
+	public CmdTime(B4six b4six) {
 		this.plugin = b4six;
-		permission = "b4six.ping";
+		permission = "b4six.time";
 	}
 
 	@Override
@@ -24,7 +24,14 @@ public class CmdPing implements CommandExecutor
 		if(p.hasPermission(permission))
 		{
 			//What to do on command:
-			p.sendMessage("Pong");
+			if(cmd.getName().equalsIgnoreCase("day"))
+			{
+				p.getWorld().setTime(0);
+			}
+			else if(cmd.getName().equalsIgnoreCase("night"))
+			{
+				p.getWorld().setTime(18000);
+			}
 		}
 		else
 		{
